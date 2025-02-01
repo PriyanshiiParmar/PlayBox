@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Sidebar = () =>{
     const isMenuOpen = useSelector(state => state.app.isMenuOpen)
@@ -6,11 +7,13 @@ const Sidebar = () =>{
         return null;
     }
     return(
-        <div className="p-5 shadow-lg w-48 ">
+        <div className="p-5 shadow-xl w-48 ">
             <ul className="border-b border-gray-500 pb-3">
                 <div className="flex items-center">
                     <li><img className="h-10 mr-4" alt="home" src="https://static.vecteezy.com/system/resources/thumbnails/022/013/913/small/home-icon-illustration-image-vector.jpg"/></li>
+                    <Link to="/">
                     <li>Home</li>
+                    </Link>
                 </div>
                 <div className="flex items-center">
                     <li><img className="h-10 mr-4" alt="shorts" src="https://i.pinimg.com/736x/17/d2/18/17d21878c22fe49e7e4752eecaa36541.jpg"/></li>
