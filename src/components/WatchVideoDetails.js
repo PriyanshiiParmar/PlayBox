@@ -2,15 +2,16 @@ import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 
 const WatchVideoDetails = ({ id }) => {
+  const apiKey = process.env.REACT_APP_API_KEY;
   const videoDetailsAPI =
     "https://www.googleapis.com/youtube/v3/videos?part=snippet&id=" +
     id +
-    "&key=AIzaSyA3w6goYXaAWHWfABLyq1Qv9_4VPNrB81M";
+    "&key="+apiKey;
 
   const channelAPI =
     "https://www.googleapis.com/youtube/v3/videos?part=statistics&id=" +
     id +
-    "&key=AIzaSyA3w6goYXaAWHWfABLyq1Qv9_4VPNrB81M";
+    "&key="+apiKey;
 
   useEffect(() => {
     getVideoDetails();

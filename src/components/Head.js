@@ -15,6 +15,9 @@ const Head = () => {
 
   const searchCache = useSelector((store) => store.search);
 
+
+  console.log(process.env.REACT_APP_API_KEY)
+
   useEffect(() => {
     //making api call with every key stroke but decline if the diff bt 2 api calls < 200ms
     const timer = setTimeout(() => {
