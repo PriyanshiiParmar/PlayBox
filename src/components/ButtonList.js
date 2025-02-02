@@ -8,7 +8,7 @@ const ButtonList = () => {
   ];
 
   return (
-    <div className="flex overflow-x-scroll w-[100%] py-2">
+    <div className="overflow-x-scroll w-[100%] py-2 hidden xl:flex lg:flex">
       {list.map((listItem, index) => (
         <Button name={listItem} key={index} />
       ))}

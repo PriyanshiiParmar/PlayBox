@@ -16,8 +16,6 @@ const Head = () => {
   const searchCache = useSelector((store) => store.search);
 
 
-  console.log(process.env.REACT_APP_API_KEY)
-
   useEffect(() => {
     //making api call with every key stroke but decline if the diff bt 2 api calls < 200ms
     const timer = setTimeout(() => {
@@ -46,7 +44,7 @@ const Head = () => {
   };
 
   return (
-    <div className="grid grid-flow-col ">
+    <div className="xl:grid  lg:grid  md:grid grid-flow-col ">
       <div className="flex col-span-1">
         <img
           onClick={() => toggleMenuHandler()}
@@ -73,7 +71,7 @@ const Head = () => {
               onBlur={() => setShowSuggestions(false)}
             />
           </div>
-          <button className=" px-3 bg-gray-300 py-1 text-white border border-gray-300   rounded-r-full">
+          <button className=" px-3  bg-gray-300 py-1 text-white border border-gray-300 rounded-r-full">
             🔍
           </button>
         </div>
@@ -87,7 +85,7 @@ const Head = () => {
           </div>
         )}
       </div>
-      <div className="col-span-1">
+      <div className="hidden xl:block">
         <img
           className="h-6 w-6 mt-6"
           alt="user-logo"

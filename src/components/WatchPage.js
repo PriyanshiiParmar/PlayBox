@@ -17,22 +17,20 @@ const WatchPage = () => {
 
   return (
     <div className="w-screen">
-    <div className="ml-32">
-  <div className="flex w-full">
+    <div className="xl:ml-32 lg:m-8 m-4">
+  <div className="xl:flex lg:flex w-full">
     <div>
       <iframe
-        width="900"
-        height="505"
         src={"https://www.youtube.com/embed/" + id}
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
         referrerpolicy="strict-origin-when-cross-origin"
         allowfullscreen
-        className="rounded-2xl"
+        className="rounded-2xl xl:h-[505px] xl:w-[900px] lg:h-[500px] lg:w-[750px] h-[500px] w-full"
       ></iframe>
     </div>
-    <div className="w-full">  {/* Allow LiveChat to take remaining space */}
+    <div className="w-full">  
     <LiveChat />
     </div>
   </div>

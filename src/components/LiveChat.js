@@ -12,7 +12,7 @@ const LiveChat = () => {
   const messages = useSelector((store) => store.chat.messages);
   useEffect(() => {
     const timer = setInterval(() => {
-      console.log("API Polled");
+      // console.log("API Polled");
       dispatch(
         addMessage({
           name: generateRandomNames(),
@@ -23,10 +23,10 @@ const LiveChat = () => {
     return () => clearInterval(timer);
   }, []);
   return (
-    <div className="mx-3 rounded-xl shadow-2xl border border-gray-400">
-      <div className="mx-3 rounded-xl shadow-2xl p-2 overflow-y-scroll  h-[505px] flex flex-col-reverse bg-slate-100">
-        {messages.map((c) => (
-          <ChatMessage name={c.name} text={c.text} />
+    <div className="mx-3 my-3 xl:my-0 rounded-xl shadow-2xl border border-gray-400 hidden xl:block lg:block">
+      <div className="mx-3 rounded-xl shadow-2xl p-2 overflow-y-scroll  xl:h-[505px] lg:h-[440px] flex flex-col-reverse bg-slate-100">
+        {messages.map((c, index) => (
+          <ChatMessage key={index} name={c.name} text={c.text} />
         ))}
       </div>
       <form
@@ -38,7 +38,7 @@ const LiveChat = () => {
             text:liveMessage
           }))
           setLiveMessage("")
-          console.log("hello");
+          // console.log("hello");
         }}
       >
         <input

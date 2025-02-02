@@ -6,12 +6,14 @@ const WatchVideoDetails = ({ id }) => {
   const videoDetailsAPI =
     "https://www.googleapis.com/youtube/v3/videos?part=snippet&id=" +
     id +
-    "&key="+apiKey;
+    "&key=" +
+    apiKey;
 
   const channelAPI =
     "https://www.googleapis.com/youtube/v3/videos?part=statistics&id=" +
     id +
-    "&key="+apiKey;
+    "&key=" +
+    apiKey;
 
   useEffect(() => {
     getVideoDetails();
@@ -53,7 +55,7 @@ const WatchVideoDetails = ({ id }) => {
   return (
     <div>
       {title ? (
-        <div className="w-[63%]">
+        <div className="xl:w-[63%] lg:w-[60%]">
           <h1 className="font-bold text-lg mt-2">{title}</h1>
           <div className="flex items-center justify-between">
             <div className="flex items-center">
@@ -65,7 +67,7 @@ const WatchVideoDetails = ({ id }) => {
                 />
               )}
               <div className="flex flex-col">
-                <h2 className="font-bold cursor-pointer">{channelTitle}</h2>
+                <h2 className="font-bold cursor-pointer ">{channelTitle}</h2>
                 <p className="font-bold text-sm">{formatLikes(viewCount)}</p>
               </div>
 
@@ -82,10 +84,10 @@ const WatchVideoDetails = ({ id }) => {
                 />
                 <p className="font-bold">{formatLikes(likeCount)}</p>
               </div>
-              <button className=" bg-gray-300 text-black font-bold px-2 py-2 rounded-full m-2">
+              <button className=" bg-gray-300 hidden xl:block lg:block md:block text-black font-bold px-2 py-2 rounded-full m-2">
                 Share
               </button>
-              <button className=" bg-gray-300 text-black font-bold px-2 py-1 rounded-full m-2">
+              <button className=" bg-gray-300 hidden xl:block lg:block md:block text-black font-bold px-2 py-1 rounded-full m-2">
                 Download
               </button>
             </div>

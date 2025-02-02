@@ -7,7 +7,7 @@ const Sidebar = () =>{
         return null;
     }
     return(
-        <div className="p-5 shadow-xl w-48 ">
+        <div className="p-5 hidden xl:block lg:block shadow-xl w-48 ">
             <ul className="border-b border-gray-500 pb-3">
                 <div className="flex items-center">
                     <li><img className="h-10 mr-4" alt="home" src="https://static.vecteezy.com/system/resources/thumbnails/022/013/913/small/home-icon-illustration-image-vector.jpg"/></li>

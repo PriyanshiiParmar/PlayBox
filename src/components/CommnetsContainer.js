@@ -227,7 +227,7 @@ const CommentList = ({ comments}) => {
 };
 const CommentsContainer = () => {
   return (
-    <div className="w-[70%] mt-8">
+    <div className="xl:w-[70%] lg:w-[73%] w-full mt-8">
       <div className="font-bold text-xl text-gray-800">Comments:</div>
       {/* <Comment data={comments[0]}/> */}
       <CommentList comments={commentsData} />
